@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         loading()
         
-        CoindeskClient.currentPrice { price in
+        CoinbaseClient.currentPrice { price in
             self.completed()
             self.price.text = String(format: "%.02f", price.value)
         }
