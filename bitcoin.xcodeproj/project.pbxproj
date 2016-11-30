@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68B1FD0B1DEF812A00C2EE8A /* CoindeskClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */; };
 		68FE616D1DED4E2300E0E6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */; };
 		68FE616F1DED4E2300E0E6DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616E1DED4E2300E0E6DD /* ViewController.swift */; };
 		68FE61721DED4E2300E0E6DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FE61701DED4E2300E0E6DD /* Main.storyboard */; };
 		68FE61741DED4E2300E0E6DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FE61731DED4E2300E0E6DD /* Assets.xcassets */; };
 		68FE61771DED4E2300E0E6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */; };
+		68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE617E1DEF4B4300E0E6DD /* Price.swift */; };
+		68FE61811DEF4C5C00E0E6DD /* PriceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskClient.swift; sourceTree = "<group>"; };
 		68FE61691DED4E2200E0E6DD /* bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68FE616E1DED4E2300E0E6DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		68FE61731DED4E2300E0E6DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68FE61761DED4E2300E0E6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68FE61781DED4E2300E0E6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FE617E1DEF4B4300E0E6DD /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				68FE61731DED4E2300E0E6DD /* Assets.xcassets */,
 				68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */,
 				68FE61781DED4E2300E0E6DD /* Info.plist */,
+				68FE617E1DEF4B4300E0E6DD /* Price.swift */,
+				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
+				68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */,
 			);
 			path = bitcoin;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B1FD0B1DEF812A00C2EE8A /* CoindeskClient.swift in Sources */,
 				68FE616F1DED4E2300E0E6DD /* ViewController.swift in Sources */,
 				68FE616D1DED4E2300E0E6DD /* AppDelegate.swift in Sources */,
+				68FE61811DEF4C5C00E0E6DD /* PriceClient.swift in Sources */,
+				68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +314,7 @@
 				68FE617D1DED4E2300E0E6DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

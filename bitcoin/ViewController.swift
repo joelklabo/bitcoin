@@ -17,36 +17,10 @@ class ViewController: UIViewController {
         
         loading()
         
-        guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {
-            fatalError()
+        CoindeskClient.currentPrice { price in
+            self.completed()
+            self.price.text = String(format: "%.02f", price.value)
         }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else {
-                fatalError()
-            }
-            guard let json = try! JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] else {
-                fatalError()
-            }
-            guard let prices = json["bpi"] as? [String: Any] else {
-                fatalError()
-            }
-            guard let USDInfo = prices["USD"] as? [String: Any] else {
-                fatalError()
-            }
-            guard let rate = USDInfo["rate"] as? String else {
-                fatalError()
-            }
-            guard let USDPrice = Double(rate) else {
-                fatalError()
-            }
-            DispatchQueue.main.async {
-                self.completed()
-                self.price.text = String(format: "%.02f", USDPrice)
-            }
-        }
-        
-        task.resume()
     }
     
     private func loading() {
