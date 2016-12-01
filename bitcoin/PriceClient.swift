@@ -10,15 +10,15 @@ import Foundation
 
 protocol PriceClient {
     func lastPrice() -> Double?
-    func storePrice(_ price: Price)
+    func storePrice(_ price: Double)
     func currentPrice(_ result: @escaping (Price) -> ())
     var type: PriceClientSource { get }
 }
 
 extension PriceClient {
     
-    func storePrice(_ price: Price) {
-        UserDefaults.standard.set(price.value, forKey: self.type.displayName())
+    func storePrice(_ price: Double) {
+        UserDefaults.standard.set(price, forKey: self.type.displayName())
     }
     
     func lastPrice() -> Double? {

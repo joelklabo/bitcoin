@@ -41,6 +41,7 @@ struct CoindeskClient: PriceClient {
             let price = Price(value: USDPrice, source: .coindesk)
                         
             DispatchQueue.main.async {
+                
                 result(price)
             }
         }
