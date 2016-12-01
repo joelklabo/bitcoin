@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="-36" y="908"/>
         </scene>
-        <!--Price Source-->
+        <!--Source-->
         <scene sceneID="Vp2-Zo-UZd">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Zbf-Ga-Rl9" customClass="PriceSourceTableViewController" customModule="bitcoin" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                             <outlet property="delegate" destination="Zbf-Ga-Rl9" id="QoX-e6-nbU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Price Source" id="djG-6t-51B"/>
+                    <navigationItem key="navigationItem" title="Source" id="djG-6t-51B"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AW4-dL-sc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
