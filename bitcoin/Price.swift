@@ -10,4 +10,5 @@ import Foundation
 
 struct Price {
     let value: Double
+    let source: PriceClientSource
 }

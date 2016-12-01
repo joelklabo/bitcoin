@@ -10,6 +10,8 @@ import Foundation
 
 struct CoindeskClient: PriceClient {
     
+    let type = PriceClientSource.blockchain
+    
     func currentPrice(_ result: @escaping (Price) -> ()) {
         
         guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {
@@ -36,8 +38,10 @@ struct CoindeskClient: PriceClient {
                 fatalError()
             }
             
+            let price = Price(value: USDPrice, source: .coindesk)
+                        
             DispatchQueue.main.async {
-                result(Price(value: USDPrice))
+                result(price)
             }
         }
         

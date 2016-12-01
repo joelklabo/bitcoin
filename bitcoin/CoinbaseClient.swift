@@ -10,6 +10,8 @@ import Foundation
 
 struct CoinbaseClient: PriceClient {
     
+    let type = PriceClientSource.coinbase
+    
     func currentPrice(_ result: @escaping (Price) -> ()) {
         
         guard let url = URL(string: "https://api.coinbase.com/v2/exchange-rates?currency=BTC") else {
@@ -37,7 +39,7 @@ struct CoinbaseClient: PriceClient {
             }
             
             DispatchQueue.main.async {
-                result(Price(value: USDPrice))
+                result(Price(value: USDPrice, source: .coinbase))
             }
         }
         

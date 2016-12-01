@@ -11,6 +11,7 @@
 		6870F5511DEFA5EE0095C34D /* PriceSourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */; };
 		68AB56461DEFBDB5007A92B4 /* SplitControllerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */; };
 		68AB56481DEFC2EB007A92B4 /* BlockchainClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */; };
+		68AB564A1DF0590F007A92B4 /* PriceClientSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56491DF0590F007A92B4 /* PriceClientSource.swift */; };
 		68B1FD0B1DEF812A00C2EE8A /* CoindeskClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */; };
 		68FE616D1DED4E2300E0E6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */; };
 		68FE616F1DED4E2300E0E6DD /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */; };
@@ -26,6 +27,7 @@
 		6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSourceTableViewController.swift; sourceTree = "<group>"; };
 		68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitControllerCustomization.swift; sourceTree = "<group>"; };
 		68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockchainClient.swift; sourceTree = "<group>"; };
+		68AB56491DF0590F007A92B4 /* PriceClientSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceClientSource.swift; sourceTree = "<group>"; };
 		68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskClient.swift; sourceTree = "<group>"; };
 		68FE61691DED4E2200E0E6DD /* bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				68FE617E1DEF4B4300E0E6DD /* Price.swift */,
 				6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */,
 				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
+				68AB56491DF0590F007A92B4 /* PriceClientSource.swift */,
 				6870F54D1DEF84E90095C34D /* Clients */,
 			);
 			path = bitcoin;
@@ -175,6 +178,7 @@
 				6870F5511DEFA5EE0095C34D /* PriceSourceTableViewController.swift in Sources */,
 				68AB56461DEFBDB5007A92B4 /* SplitControllerCustomization.swift in Sources */,
 				68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */,
+				68AB564A1DF0590F007A92B4 /* PriceClientSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

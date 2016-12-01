@@ -9,40 +9,22 @@
 import Foundation
 
 protocol PriceClient {
+    func lastPrice() -> Double?
+    func storePrice(_ price: Price)
     func currentPrice(_ result: @escaping (Price) -> ())
+    var type: PriceClientSource { get }
 }
 
-enum PriceClientSource: Int {
+extension PriceClient {
     
-    case coinbase
-    case blockchain
-    case coindesk
-    
-    case total
-    
-    func source() -> PriceClient {
-        switch self {
-        case .coinbase:
-            return CoinbaseClient()
-        case .coindesk:
-            return CoindeskClient()
-        case .blockchain:
-            return BlockchainClient()
-        default:
-            fatalError("unknown client")
-        }
+    func storePrice(_ price: Price) {
+        UserDefaults.standard.set(price.value, forKey: self.type.displayName())
     }
     
-    func displayName() -> String {
-        switch self {
-        case .coinbase:
-            return "Coinbase"
-        case .coindesk:
-            return "Coindesk"
-        case .blockchain:
-            return "Blockchain.info"
-        default:
-            fatalError("unknown source")
+    func lastPrice() -> Double? {
+        guard let price = UserDefaults.standard.value(forKey: self.type.displayName()) as? Double else {
+            return nil
         }
+        return price
     }
 }

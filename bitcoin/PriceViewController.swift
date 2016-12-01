@@ -19,6 +19,9 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = priceSource.displayName()
+        if let storedPrice = priceSource.source().lastPrice() {
+            self.price.text = formatPrice(storedPrice)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,8 +32,9 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
     func updatePrice() {
         loading()
         priceSource.source().currentPrice { price in
+            self.priceSource.source().storePrice(price)
             self.completed()
-            self.price.text = String(format: "%.02f", price.value)
+            self.price.text = self.formatPrice(price.value)
         }
     }
 
@@ -44,5 +48,8 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
         price.alpha = 1.0
     }
 
+    private func formatPrice(_ price: Double) -> String {
+        return String(format: "%.02f", price)
+    }
 }
 

@@ -10,6 +10,8 @@ import Foundation
 
 struct BlockchainClient: PriceClient {
     
+    let type = PriceClientSource.blockchain
+    
     func currentPrice(_ result: @escaping (Price) -> ()) {
         
         guard let url = URL(string: "https://blockchain.info/ticker") else {
@@ -37,7 +39,7 @@ struct BlockchainClient: PriceClient {
             let USDPrice = Double(lastUSDPrice)
             
             DispatchQueue.main.async {
-                result(Price(value: USDPrice))
+                result(Price(value: USDPrice, source: .blockchain))
             }
         }
         
