@@ -33,11 +33,11 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
         loading()
         priceSource.source().currentPrice { price in
             self.priceSource.source().storePrice(price)
-            self.completed()
             self.price.text = self.formatPrice(price.value)
+            self.completed()
         }
     }
-
+    
     private func loading() {
         price.alpha = 0.3
         spinner.startAnimating()
