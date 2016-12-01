@@ -10,7 +10,7 @@ import Foundation
 
 struct CoindeskClient: PriceClient {
     
-    static func currentPrice(_ result: @escaping (Price) -> ()) {
+    func currentPrice(_ result: @escaping (Price) -> ()) {
         
         guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {
             fatalError()

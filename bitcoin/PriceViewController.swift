@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PriceViewController.swift
 //  bitcoin
 //
 //  Created by Joel Klabo on 11/28/16.
@@ -8,21 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PriceViewController: UIViewController, UISplitViewControllerDelegate {
+    
+    // Set the default client
+    var priceSource: PriceClientSource = .coinbase
     
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = priceSource.displayName()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updatePrice()
+    }
+    
     func updatePrice() {
-        
         loading()
-        
-        CoinbaseClient.currentPrice { price in
+        priceSource.source().currentPrice { price in
             self.completed()
             self.price.text = String(format: "%.02f", price.value)
         }
     }
-    
+
     private func loading() {
         price.alpha = 0.3
         spinner.startAnimating()
@@ -31,20 +42,6 @@ class ViewController: UIViewController {
     private func completed() {
         self.spinner.stopAnimating()
         price.alpha = 1.0
-    }
-
-    override func viewDidLoad() {
-        spinner.hidesWhenStopped = true
-        spinner.stopAnimating()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updatePrice), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-    }
-    
-    @IBAction func doubleTap(_ sender: Any) {
-        updatePrice()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updatePrice()
     }
 
 }

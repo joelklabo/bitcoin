@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6870F54F1DEF86A40095C34D /* CoinbaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870F54E1DEF86A40095C34D /* CoinbaseClient.swift */; };
+		6870F5511DEFA5EE0095C34D /* PriceSourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */; };
+		68AB56461DEFBDB5007A92B4 /* SplitControllerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */; };
+		68AB56481DEFC2EB007A92B4 /* BlockchainClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */; };
 		68B1FD0B1DEF812A00C2EE8A /* CoindeskClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */; };
 		68FE616D1DED4E2300E0E6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */; };
-		68FE616F1DED4E2300E0E6DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616E1DED4E2300E0E6DD /* ViewController.swift */; };
+		68FE616F1DED4E2300E0E6DD /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */; };
 		68FE61721DED4E2300E0E6DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FE61701DED4E2300E0E6DD /* Main.storyboard */; };
 		68FE61741DED4E2300E0E6DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FE61731DED4E2300E0E6DD /* Assets.xcassets */; };
 		68FE61771DED4E2300E0E6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */; };
@@ -20,10 +23,13 @@
 
 /* Begin PBXFileReference section */
 		6870F54E1DEF86A40095C34D /* CoinbaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinbaseClient.swift; sourceTree = "<group>"; };
+		6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSourceTableViewController.swift; sourceTree = "<group>"; };
+		68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitControllerCustomization.swift; sourceTree = "<group>"; };
+		68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockchainClient.swift; sourceTree = "<group>"; };
 		68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoindeskClient.swift; sourceTree = "<group>"; };
 		68FE61691DED4E2200E0E6DD /* bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68FE616E1DED4E2300E0E6DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		68FE61711DED4E2300E0E6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68FE61731DED4E2300E0E6DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68FE61761DED4E2300E0E6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */,
+				68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */,
 				6870F54E1DEF86A40095C34D /* CoinbaseClient.swift */,
 			);
 			name = Clients;
@@ -72,12 +79,14 @@
 			isa = PBXGroup;
 			children = (
 				68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */,
-				68FE616E1DED4E2300E0E6DD /* ViewController.swift */,
+				68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */,
+				68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */,
 				68FE61701DED4E2300E0E6DD /* Main.storyboard */,
 				68FE61731DED4E2300E0E6DD /* Assets.xcassets */,
 				68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */,
 				68FE61781DED4E2300E0E6DD /* Info.plist */,
 				68FE617E1DEF4B4300E0E6DD /* Price.swift */,
+				6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */,
 				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
 				6870F54D1DEF84E90095C34D /* Clients */,
 			);
@@ -157,11 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AB56481DEFC2EB007A92B4 /* BlockchainClient.swift in Sources */,
 				68B1FD0B1DEF812A00C2EE8A /* CoindeskClient.swift in Sources */,
-				68FE616F1DED4E2300E0E6DD /* ViewController.swift in Sources */,
+				68FE616F1DED4E2300E0E6DD /* PriceViewController.swift in Sources */,
 				68FE616D1DED4E2300E0E6DD /* AppDelegate.swift in Sources */,
 				68FE61811DEF4C5C00E0E6DD /* PriceClient.swift in Sources */,
 				6870F54F1DEF86A40095C34D /* CoinbaseClient.swift in Sources */,
+				6870F5511DEFA5EE0095C34D /* PriceSourceTableViewController.swift in Sources */,
+				68AB56461DEFBDB5007A92B4 /* SplitControllerCustomization.swift in Sources */,
 				68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
