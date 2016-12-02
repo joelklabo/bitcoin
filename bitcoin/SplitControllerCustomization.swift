@@ -12,6 +12,7 @@ extension UISplitViewController: UISplitViewControllerDelegate {
     
     // MARK: - user defined imlementation of UISplitViewControllerDelegate
     
-    public func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {        return true
+    public func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return false
     }
 }

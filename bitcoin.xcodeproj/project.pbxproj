@@ -61,6 +61,26 @@
 			name = Clients;
 			sourceTree = "<group>";
 		};
+		68AB564B1DF068A9007A92B4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */,
+				68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */,
+				68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		68AB564C1DF068C6007A92B4 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				68FE617E1DEF4B4300E0E6DD /* Price.swift */,
+				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
+				68AB56491DF0590F007A92B4 /* PriceClientSource.swift */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
 		68FE61601DED4E2200E0E6DD = {
 			isa = PBXGroup;
 			children = (
@@ -81,16 +101,12 @@
 			isa = PBXGroup;
 			children = (
 				68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */,
-				68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */,
-				68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */,
+				68AB564B1DF068A9007A92B4 /* View Controllers */,
 				68FE61701DED4E2300E0E6DD /* Main.storyboard */,
 				68FE61731DED4E2300E0E6DD /* Assets.xcassets */,
 				68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */,
 				68FE61781DED4E2300E0E6DD /* Info.plist */,
-				68FE617E1DEF4B4300E0E6DD /* Price.swift */,
-				6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */,
-				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
-				68AB56491DF0590F007A92B4 /* PriceClientSource.swift */,
+				68AB564C1DF068C6007A92B4 /* State */,
 				6870F54D1DEF84E90095C34D /* Clients */,
 			);
 			path = bitcoin;
