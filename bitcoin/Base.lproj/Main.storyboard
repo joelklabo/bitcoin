@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6SC-lg-feX">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,24 +20,24 @@
                         <viewControllerLayoutGuide type="bottom" id="kcO-oF-TXe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8MT-J4-NLb">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$563.83" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-4J-Xum">
-                                <rect key="frame" x="0.0" y="28" width="768" height="205"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="563.83" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-4J-Xum">
+                                <rect key="frame" x="68.5" y="28" width="238" height="133.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="74"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="redraw" verticalCompressionResistancePriority="760" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-cN-hQw" customClass="ChartView" customModule="bitcoin" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="261" width="768" height="614.5"/>
+                                <rect key="frame" x="-4" y="189.5" width="383" height="400"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54K-qT-sN9">
-                                <rect key="frame" x="0.0" y="819" width="768" height="205"/>
+                                <rect key="frame" x="-4" y="533.5" width="383" height="133.5"/>
                                 <subviews>
                                     <segmentedControl contentMode="scaleToFill" verticalHuggingPriority="260" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ufk-Jo-iI7">
-                                        <rect key="frame" x="256.5" y="88" width="255" height="29"/>
+                                        <rect key="frame" x="64" y="52.5" width="255" height="29"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="All Time"/>
@@ -57,24 +57,29 @@
                                     <constraint firstItem="Ufk-Jo-iI7" firstAttribute="centerY" secondItem="54K-qT-sN9" secondAttribute="centerY" id="znw-TC-nHR"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EEq-vE-haw">
+                                <rect key="frame" x="314" y="84" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kcO-oF-TXe" firstAttribute="top" secondItem="54K-qT-sN9" secondAttribute="bottom" id="024-vA-ibw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Grp-cN-hQw" secondAttribute="trailing" constant="-20" id="3yh-NX-XPr"/>
                             <constraint firstItem="NqR-4J-Xum" firstAttribute="height" secondItem="8MT-J4-NLb" secondAttribute="height" multiplier="0.2" id="441-Wp-RDH"/>
-                            <constraint firstItem="NqR-4J-Xum" firstAttribute="leading" secondItem="8MT-J4-NLb" secondAttribute="leadingMargin" constant="-20" id="6mr-2A-BUi"/>
                             <constraint firstItem="54K-qT-sN9" firstAttribute="height" secondItem="8MT-J4-NLb" secondAttribute="height" multiplier="0.2" id="7UQ-u8-nEr"/>
                             <constraint firstItem="NqR-4J-Xum" firstAttribute="top" secondItem="hM7-n3-fEW" secondAttribute="bottom" constant="8" id="Lgl-TE-Ckj"/>
                             <constraint firstItem="Grp-cN-hQw" firstAttribute="height" secondItem="8MT-J4-NLb" secondAttribute="height" multiplier="0.6" id="VnK-0O-6U3"/>
                             <constraint firstItem="54K-qT-sN9" firstAttribute="leading" secondItem="8MT-J4-NLb" secondAttribute="leadingMargin" constant="-20" id="Wwt-av-Hyf"/>
                             <constraint firstItem="Grp-cN-hQw" firstAttribute="leading" secondItem="8MT-J4-NLb" secondAttribute="leadingMargin" constant="-20" id="X2P-Rc-La1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NqR-4J-Xum" secondAttribute="trailing" constant="-20" id="aqb-TP-IsW"/>
+                            <constraint firstItem="EEq-vE-haw" firstAttribute="centerY" secondItem="NqR-4J-Xum" secondAttribute="centerY" id="X82-74-CEe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="54K-qT-sN9" secondAttribute="trailing" constant="-20" id="crH-PK-b0h"/>
+                            <constraint firstItem="NqR-4J-Xum" firstAttribute="centerX" secondItem="8MT-J4-NLb" secondAttribute="centerX" id="dsB-hm-LNV"/>
+                            <constraint firstItem="EEq-vE-haw" firstAttribute="leading" secondItem="NqR-4J-Xum" secondAttribute="trailing" constant="7.5" id="kSM-Rx-6MB"/>
                             <constraint firstItem="Grp-cN-hQw" firstAttribute="top" secondItem="NqR-4J-Xum" secondAttribute="bottom" constant="28" id="y1N-Fh-8zK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="EEq-vE-haw" id="Raz-Mt-jyR"/>
                         <outlet property="chartView" destination="Grp-cN-hQw" id="PM7-kD-MWh"/>
                         <outlet property="currentPrice" destination="NqR-4J-Xum" id="Eaj-uL-Hpd"/>
                     </connections>

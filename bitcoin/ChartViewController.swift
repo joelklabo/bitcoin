@@ -16,20 +16,16 @@ class ChartViewController: UIViewController {
     
     @IBOutlet weak var chartView: ChartView!
     @IBOutlet weak var currentPrice: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        lastPrice = priceSource.source().lastPrice()
-        
-        if let storedPrice = lastPrice {
-            self.currentPrice.text = formatPrice(storedPrice)
-        }
-
-        priceSource.source().currentPrice { price in
-            self.priceSource.source().storePrice(price)
-            self.currentPrice.text = self.formatPrice(price)
-        }        
+        activityIndicator.hidesWhenStopped = true
+        updateChart(.sevenDays)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updatePrice()
     }
 
     @IBAction func chartRangeUpdate(_ sender: Any) {
@@ -37,17 +33,32 @@ class ChartViewController: UIViewController {
             guard let chartRange = ChartRange(rawValue: control.selectedSegmentIndex) else {
                 fatalError()
             }
-            BlockchainChartClient().chartFor(chartRange) { chart in
-                self.chartView.chart = chart
-            }
+            updateChart(chartRange)
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func updateChart(_ range: ChartRange) {
+        activityIndicator.startAnimating()
+        BlockchainChartClient().chartFor(range) { chart in
+            self.activityIndicator.stopAnimating()
+            self.chartView.chart = chart
+        }
     }
     
+    private func updatePrice() {
+        lastPrice = priceSource.source().lastPrice()
+        
+        if let storedPrice = lastPrice {
+            self.currentPrice.text = formatPrice(storedPrice)
+        }
+        activityIndicator.startAnimating()
+        priceSource.source().currentPrice { price in
+            self.activityIndicator.stopAnimating()
+            self.priceSource.source().storePrice(price)
+            self.currentPrice.text = self.formatPrice(price)
+        }
+    }
+
     private func formatPrice(_ price: CGFloat) -> String {
         return String(format: "%.02f", price)
     }

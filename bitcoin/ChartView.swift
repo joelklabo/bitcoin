@@ -27,7 +27,7 @@ class ChartView: UIView {
         let viewHeight = rect.size.height
         
         let maxPrice = chart.prices.max()!
-        let heightRatio = viewHeight / maxPrice - 0.03
+        let heightRatio = viewHeight / maxPrice - 0.05
         let xPerPrice = viewWidth / CGFloat(chart.prices.count - 1)
 
         let linePath = UIBezierPath()
@@ -47,9 +47,21 @@ class ChartView: UIView {
             }
             
             if (price == maxPrice) {
+                
+                let priceString: NSString = "FakePrice"
+                
+                let attributes: [String: AnyObject] = [
+                    NSFontAttributeName: UIFont(name: "Helvetica", size: 12)!,
+                    NSStrokeWidthAttributeName: 0 as AnyObject,
+                    NSForegroundColorAttributeName: UIColor.white
+                ]
+                
                 UIColor.magenta.setFill()
-                let maxPricePoint = UIBezierPath(arcCenter: currentPoint, radius: 10, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: true)
+                let maxPricePoint = UIBezierPath(arcCenter: currentPoint, radius: 30, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: true)
                 maxPricePoint.fill()
+
+                priceString.draw(at: currentPoint, withAttributes: attributes)
+                
             }
         }
         
