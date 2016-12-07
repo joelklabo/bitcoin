@@ -60,6 +60,12 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EEq-vE-haw">
                                 <rect key="frame" x="314" y="84" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0P-6t-9c1">
+                                <rect key="frame" x="43" y="77" width="18" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -72,8 +78,10 @@
                             <constraint firstItem="54K-qT-sN9" firstAttribute="leading" secondItem="8MT-J4-NLb" secondAttribute="leadingMargin" constant="-20" id="Wwt-av-Hyf"/>
                             <constraint firstItem="Grp-cN-hQw" firstAttribute="leading" secondItem="8MT-J4-NLb" secondAttribute="leadingMargin" constant="-20" id="X2P-Rc-La1"/>
                             <constraint firstItem="EEq-vE-haw" firstAttribute="centerY" secondItem="NqR-4J-Xum" secondAttribute="centerY" id="X82-74-CEe"/>
+                            <constraint firstItem="NqR-4J-Xum" firstAttribute="leading" secondItem="L0P-6t-9c1" secondAttribute="trailing" constant="7.5" id="anM-6b-t0h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="54K-qT-sN9" secondAttribute="trailing" constant="-20" id="crH-PK-b0h"/>
                             <constraint firstItem="NqR-4J-Xum" firstAttribute="centerX" secondItem="8MT-J4-NLb" secondAttribute="centerX" id="dsB-hm-LNV"/>
+                            <constraint firstItem="L0P-6t-9c1" firstAttribute="centerY" secondItem="NqR-4J-Xum" secondAttribute="centerY" id="gTK-3Z-TGa"/>
                             <constraint firstItem="EEq-vE-haw" firstAttribute="leading" secondItem="NqR-4J-Xum" secondAttribute="trailing" constant="7.5" id="kSM-Rx-6MB"/>
                             <constraint firstItem="Grp-cN-hQw" firstAttribute="top" secondItem="NqR-4J-Xum" secondAttribute="bottom" constant="28" id="y1N-Fh-8zK"/>
                         </constraints>
@@ -86,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvd-BD-obi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186.71875" y="638.671875"/>
+            <point key="canvasLocation" x="-188" y="638.2308845577212"/>
         </scene>
     </scenes>
 </document>
