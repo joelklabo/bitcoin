@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct CoinbaseClient: PriceClient {
     
     let type = PriceClientSource.coinbase
     
-    func currentPrice(_ result: @escaping (Price) -> ()) {
+    func currentPrice(_ result: @escaping (CGFloat) -> ()) {
         
         guard let url = URL(string: "https://api.coinbase.com/v2/exchange-rates?currency=BTC") else {
             fatalError()
@@ -34,12 +35,13 @@ struct CoinbaseClient: PriceClient {
             guard let USDInfo = rates["USD"] as? String else {
                 fatalError()
             }
-            guard let USDPrice = Double(USDInfo) else {
+            
+            guard let price = NumberFormatter().number(from: USDInfo) else {
                 fatalError()
             }
             
             DispatchQueue.main.async {
-                result(Price(value: USDPrice, source: .coinbase))
+                result(CGFloat(price))
             }
         }
         

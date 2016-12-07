@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct BlockchainClient: PriceClient {
     
     let type = PriceClientSource.blockchain
     
-    func currentPrice(_ result: @escaping (Price) -> ()) {
+    func currentPrice(_ result: @escaping (CGFloat) -> ()) {
         
         guard let url = URL(string: "https://blockchain.info/ticker") else {
             fatalError()
@@ -36,10 +37,8 @@ struct BlockchainClient: PriceClient {
                 fatalError()
             }
             
-            let USDPrice = Double(lastUSDPrice)
-            
             DispatchQueue.main.async {
-                result(Price(value: USDPrice, source: .blockchain))
+                result(CGFloat(lastUSDPrice))
             }
         }
         

@@ -7,22 +7,23 @@
 //
 
 import Foundation
+import CoreGraphics
 
 protocol PriceClient {
-    func lastPrice() -> Double?
-    func storePrice(_ price: Double)
-    func currentPrice(_ result: @escaping (Price) -> ())
+    func lastPrice() -> CGFloat?
+    func storePrice(_ price: CGFloat)
+    func currentPrice(_ result: @escaping (CGFloat) -> ())
     var type: PriceClientSource { get }
 }
 
 extension PriceClient {
     
-    func storePrice(_ price: Double) {
+    func storePrice(_ price: CGFloat) {
         UserDefaults.standard.set(price, forKey: self.type.displayName())
     }
     
-    func lastPrice() -> Double? {
-        guard let price = UserDefaults.standard.value(forKey: self.type.displayName()) as? Double else {
+    func lastPrice() -> CGFloat? {
+        guard let price = UserDefaults.standard.value(forKey: self.type.displayName()) as? CGFloat else {
             return nil
         }
         return price

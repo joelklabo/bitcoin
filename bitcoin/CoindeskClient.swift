@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct CoindeskClient: PriceClient {
     
     let type = PriceClientSource.blockchain
     
-    func currentPrice(_ result: @escaping (Price) -> ()) {
+    func currentPrice(_ result: @escaping (CGFloat) -> ()) {
         
         guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {
             fatalError()
@@ -34,15 +35,12 @@ struct CoindeskClient: PriceClient {
             guard let rate = USDInfo["rate"] as? String else {
                 fatalError()
             }
-            guard let USDPrice = Double(rate) else {
+            guard let price = NumberFormatter().number(from: rate) else {
                 fatalError()
             }
-            
-            let price = Price(value: USDPrice, source: .coindesk)
                         
             DispatchQueue.main.async {
-                
-                result(price)
+                result(CGFloat(price))
             }
         }
         

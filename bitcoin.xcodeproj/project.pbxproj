@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		6870F54F1DEF86A40095C34D /* CoinbaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870F54E1DEF86A40095C34D /* CoinbaseClient.swift */; };
 		6870F5511DEFA5EE0095C34D /* PriceSourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */; };
+		687AA2651DF2651700B21740 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA2641DF2651700B21740 /* Chart.swift */; };
+		687AA2671DF2663B00B21740 /* ChartClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA2661DF2663B00B21740 /* ChartClient.swift */; };
+		687AA2691DF2686F00B21740 /* ChartClientSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA2681DF2686F00B21740 /* ChartClientSource.swift */; };
+		687AA26B1DF268EA00B21740 /* BlockchainChartClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA26A1DF268EA00B21740 /* BlockchainChartClient.swift */; };
+		687AA2711DF35CB700B21740 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA2701DF35CB700B21740 /* ChartView.swift */; };
+		687AA2751DF35ED200B21740 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA2741DF35ED200B21740 /* ChartViewController.swift */; };
 		68AB56461DEFBDB5007A92B4 /* SplitControllerCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */; };
 		68AB56481DEFC2EB007A92B4 /* BlockchainClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */; };
 		68AB564A1DF0590F007A92B4 /* PriceClientSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AB56491DF0590F007A92B4 /* PriceClientSource.swift */; };
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		6870F54E1DEF86A40095C34D /* CoinbaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinbaseClient.swift; sourceTree = "<group>"; };
 		6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSourceTableViewController.swift; sourceTree = "<group>"; };
+		687AA2641DF2651700B21740 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		687AA2661DF2663B00B21740 /* ChartClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartClient.swift; sourceTree = "<group>"; };
+		687AA2681DF2686F00B21740 /* ChartClientSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartClientSource.swift; sourceTree = "<group>"; };
+		687AA26A1DF268EA00B21740 /* BlockchainChartClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockchainChartClient.swift; sourceTree = "<group>"; };
+		687AA2701DF35CB700B21740 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		687AA2741DF35ED200B21740 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitControllerCustomization.swift; sourceTree = "<group>"; };
 		68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockchainClient.swift; sourceTree = "<group>"; };
 		68AB56491DF0590F007A92B4 /* PriceClientSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceClientSource.swift; sourceTree = "<group>"; };
@@ -33,7 +45,7 @@
 		68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		68FE61711DED4E2300E0E6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		68FE61731DED4E2300E0E6DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68FE61731DED4E2300E0E6DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = bitcoin/Assets.xcassets; sourceTree = "<group>"; };
 		68FE61761DED4E2300E0E6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68FE61781DED4E2300E0E6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FE617E1DEF4B4300E0E6DD /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -51,20 +63,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6870F54D1DEF84E90095C34D /* Clients */ = {
+		6870F54D1DEF84E90095C34D /* Price Clients */ = {
 			isa = PBXGroup;
 			children = (
 				68B1FD0A1DEF812A00C2EE8A /* CoindeskClient.swift */,
 				68AB56471DEFC2EB007A92B4 /* BlockchainClient.swift */,
 				6870F54E1DEF86A40095C34D /* CoinbaseClient.swift */,
 			);
+			name = "Price Clients";
+			sourceTree = "<group>";
+		};
+		687AA26C1DF268F100B21740 /* Chart Clients */ = {
+			isa = PBXGroup;
+			children = (
+				687AA26A1DF268EA00B21740 /* BlockchainChartClient.swift */,
+			);
+			name = "Chart Clients";
+			sourceTree = "<group>";
+		};
+		687AA26D1DF2706B00B21740 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				687AA26C1DF268F100B21740 /* Chart Clients */,
+				6870F54D1DEF84E90095C34D /* Price Clients */,
+				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
+				687AA2661DF2663B00B21740 /* ChartClient.swift */,
+				687AA2681DF2686F00B21740 /* ChartClientSource.swift */,
+				68AB56491DF0590F007A92B4 /* PriceClientSource.swift */,
+			);
 			name = Clients;
+			sourceTree = "<group>";
+		};
+		687AA2721DF35CBB00B21740 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				687AA2701DF35CB700B21740 /* ChartView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		687AA2731DF35D6000B21740 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				68FE61701DED4E2300E0E6DD /* Main.storyboard */,
+				68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		68AB564B1DF068A9007A92B4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6870F5501DEFA5EE0095C34D /* PriceSourceTableViewController.swift */,
+				687AA2741DF35ED200B21740 /* ChartViewController.swift */,
 				68AB56451DEFBDB5007A92B4 /* SplitControllerCustomization.swift */,
 				68FE616E1DED4E2300E0E6DD /* PriceViewController.swift */,
 			);
@@ -75,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				68FE617E1DEF4B4300E0E6DD /* Price.swift */,
-				68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */,
-				68AB56491DF0590F007A92B4 /* PriceClientSource.swift */,
+				687AA2641DF2651700B21740 /* Chart.swift */,
+				687AA26D1DF2706B00B21740 /* Clients */,
 			);
 			name = State;
 			sourceTree = "<group>";
@@ -85,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				68FE616B1DED4E2200E0E6DD /* bitcoin */,
+				68FE61731DED4E2300E0E6DD /* Assets.xcassets */,
 				68FE616A1DED4E2200E0E6DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,14 +152,12 @@
 		68FE616B1DED4E2200E0E6DD /* bitcoin */ = {
 			isa = PBXGroup;
 			children = (
-				68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */,
+				687AA2731DF35D6000B21740 /* Storyboard */,
 				68AB564B1DF068A9007A92B4 /* View Controllers */,
-				68FE61701DED4E2300E0E6DD /* Main.storyboard */,
-				68FE61731DED4E2300E0E6DD /* Assets.xcassets */,
-				68FE61751DED4E2300E0E6DD /* LaunchScreen.storyboard */,
-				68FE61781DED4E2300E0E6DD /* Info.plist */,
+				687AA2721DF35CBB00B21740 /* Views */,
 				68AB564C1DF068C6007A92B4 /* State */,
-				6870F54D1DEF84E90095C34D /* Clients */,
+				68FE616C1DED4E2300E0E6DD /* AppDelegate.swift */,
+				68FE61781DED4E2300E0E6DD /* Info.plist */,
 			);
 			path = bitcoin;
 			sourceTree = "<group>";
@@ -186,14 +236,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				68AB56481DEFC2EB007A92B4 /* BlockchainClient.swift in Sources */,
+				687AA2671DF2663B00B21740 /* ChartClient.swift in Sources */,
 				68B1FD0B1DEF812A00C2EE8A /* CoindeskClient.swift in Sources */,
 				68FE616F1DED4E2300E0E6DD /* PriceViewController.swift in Sources */,
+				687AA2651DF2651700B21740 /* Chart.swift in Sources */,
+				687AA2751DF35ED200B21740 /* ChartViewController.swift in Sources */,
+				687AA26B1DF268EA00B21740 /* BlockchainChartClient.swift in Sources */,
 				68FE616D1DED4E2300E0E6DD /* AppDelegate.swift in Sources */,
 				68FE61811DEF4C5C00E0E6DD /* PriceClient.swift in Sources */,
+				687AA2711DF35CB700B21740 /* ChartView.swift in Sources */,
 				6870F54F1DEF86A40095C34D /* CoinbaseClient.swift in Sources */,
 				6870F5511DEFA5EE0095C34D /* PriceSourceTableViewController.swift in Sources */,
 				68AB56461DEFBDB5007A92B4 /* SplitControllerCustomization.swift in Sources */,
 				68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */,
+				687AA2691DF2686F00B21740 /* ChartClientSource.swift in Sources */,
 				68AB564A1DF0590F007A92B4 /* PriceClientSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

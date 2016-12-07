@@ -13,7 +13,7 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
     // Set the default client
     var priceSource: PriceClientSource = .coinbase
     
-    private var lastPrice: Double?
+    private var lastPrice: CGFloat?
     
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -35,30 +35,12 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
     func updatePrice() {
         loading()
         priceSource.source().currentPrice { price in
-            self.priceSource.source().storePrice(price.value)
-            self.price.text = self.formatPrice(price.value)
-            
-            if let last = self.lastPrice {
-                if last > price.value {
-                    self.setBackgroundPositive(false)
-                } else {
-                    self.setBackgroundPositive(true)
-                }
-            } else {
-                print("whoops")
-            }
-            
+            self.priceSource.source().storePrice(price)
+            self.price.text = self.formatPrice(price)
             self.completed()
         }
     }
     
-    private func setBackgroundPositive(_ condition: Bool) {
-        if condition {
-            view.backgroundColor = UIColor.green
-        } else {
-            view.backgroundColor = UIColor.red
-        }
-    }
     
     private func loading() {
         price.alpha = 0.3
@@ -70,7 +52,7 @@ class PriceViewController: UIViewController, UISplitViewControllerDelegate {
         price.alpha = 1.0
     }
 
-    private func formatPrice(_ price: Double) -> String {
+    private func formatPrice(_ price: CGFloat) -> String {
         return String(format: "%.02f", price)
     }
 }
