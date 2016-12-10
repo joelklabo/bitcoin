@@ -19,7 +19,7 @@ class ChartView: UIView {
     override func draw(_ rect: CGRect) {
         
         guard let chart = chart else { return }
-        guard let _ = UIGraphicsGetCurrentContext() else {
+        guard let context = UIGraphicsGetCurrentContext() else {
             return
         }
 
@@ -48,20 +48,32 @@ class ChartView: UIView {
             
             if (price == maxPrice) {
                 
-                let priceString: NSString = "FakePrice"
+                let priceString = "$\(formatPrice(maxPrice))" as NSString
                 
                 let attributes: [String: AnyObject] = [
-                    NSFontAttributeName: UIFont(name: "Helvetica", size: 12)!,
+                    NSFontAttributeName: UIFont.systemFont(ofSize: 14),
                     NSStrokeWidthAttributeName: 0 as AnyObject,
                     NSForegroundColorAttributeName: UIColor.white
                 ]
                 
-                UIColor.magenta.setFill()
-                let maxPricePoint = UIBezierPath(arcCenter: currentPoint, radius: 30, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: true)
+                let maxPriceWidth: CGFloat = 70
+                let maxPriceHeight: CGFloat = 20
+                
+                let maxPriceOrigin = CGPoint(x: currentPoint.x - maxPriceWidth, y: currentPoint.y - maxPriceHeight)
+                let maxPriceRect = CGRect(origin: maxPriceOrigin, size: CGSize(width: maxPriceWidth, height: maxPriceHeight))
+                
+                UIColor.black.setFill()
+                let maxPricePoint = UIBezierPath(roundedRect: maxPriceRect, cornerRadius: 4)
                 maxPricePoint.fill()
 
-                priceString.draw(at: currentPoint, withAttributes: attributes)
+                let priceSize = priceString.size(attributes: attributes)
                 
+                let priceHeightDifference = (maxPriceRect.size.height - priceSize.height) / 2
+                let priceWidthDifference = (maxPriceRect.size.width - priceSize.width) / 2
+                
+                let priceRect = maxPriceRect.insetBy(dx: priceWidthDifference, dy: priceHeightDifference)
+                
+                priceString.draw(in: priceRect, withAttributes: attributes)
             }
         }
         
@@ -80,5 +92,8 @@ class ChartView: UIView {
         UIColor.black.setFill()
         linePath.fill()
     }
-
+    
+    private func formatPrice(_ price: CGFloat) -> String {
+        return String(format: "%.02f", price)
+    }
 }

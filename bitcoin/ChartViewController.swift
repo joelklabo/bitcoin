@@ -17,15 +17,15 @@ class ChartViewController: UIViewController {
     @IBOutlet weak var chartView: ChartView!
     @IBOutlet weak var currentPrice: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let becameActiveNotification = NSNotification.Name.UIApplicationDidBecomeActive
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePrice), name: becameActiveNotification, object: nil)
         activityIndicator.hidesWhenStopped = true
-        updateChart(.sevenDays)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updatePrice()
+        updateChart(.oneMonth)
+        segmentedControl.selectedSegmentIndex = ChartRange.oneMonth.rawValue
     }
 
     @IBAction func chartRangeUpdate(_ sender: Any) {
@@ -45,7 +45,7 @@ class ChartViewController: UIViewController {
         }
     }
     
-    private func updatePrice() {
+    dynamic private func updatePrice() {
         lastPrice = priceSource.source().lastPrice()
         
         if let storedPrice = lastPrice {

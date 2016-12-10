@@ -42,8 +42,8 @@
                                         <segments>
                                             <segment title="All Time"/>
                                             <segment title="1 year"/>
+                                            <segment title="2 years"/>
                                             <segment title="1 month"/>
-                                            <segment title="7 days"/>
                                         </segments>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -90,6 +90,7 @@
                         <outlet property="activityIndicator" destination="EEq-vE-haw" id="Raz-Mt-jyR"/>
                         <outlet property="chartView" destination="Grp-cN-hQw" id="PM7-kD-MWh"/>
                         <outlet property="currentPrice" destination="NqR-4J-Xum" id="Eaj-uL-Hpd"/>
+                        <outlet property="segmentedControl" destination="Ufk-Jo-iI7" id="b9l-ce-RTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvd-BD-obi" userLabel="First Responder" sceneMemberID="firstResponder"/>

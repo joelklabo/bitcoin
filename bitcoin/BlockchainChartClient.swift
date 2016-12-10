@@ -21,14 +21,14 @@ struct BlockchainChartClient: ChartClient {
         case .allTime:
             url = URL(string: "https://api.blockchain.info/charts/market-price?format=json&timespan=all")
             break
+        case .twoYears:
+            url = URL(string: "https://api.blockchain.info/charts/market-price?format=json&timespan=2years")
+            break
         case .oneYear:
             url = URL(string: "https://api.blockchain.info/charts/market-price?format=json&timespan=1year")
             break
         case .oneMonth:
             url = URL(string: "https://api.blockchain.info/charts/market-price?format=json&timespan=30days")
-            break
-        case .sevenDays:
-            url = URL(string: "https://api.blockchain.info/charts/market-price?format=json&timespan=7days")
             break
         }
         

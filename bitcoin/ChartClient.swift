@@ -15,6 +15,6 @@ protocol ChartClient {
 enum ChartRange: Int {
     case allTime
     case oneYear
+    case twoYears
     case oneMonth
-    case sevenDays
 }
