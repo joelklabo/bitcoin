@@ -51,9 +51,9 @@ class ChartView: UIView {
                 let priceString = "$\(formatPrice(maxPrice))" as NSString
                 
                 let attributes: [String: AnyObject] = [
-                    NSFontAttributeName: UIFont.systemFont(ofSize: 14),
-                    NSStrokeWidthAttributeName: 0 as AnyObject,
-                    NSForegroundColorAttributeName: UIColor.white
+                    NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 14),
+                    NSAttributedStringKey.strokeWidth.rawValue: 0 as AnyObject,
+                    NSAttributedStringKey.foregroundColor.rawValue: UIColor.white
                 ]
                 
                 let maxPriceWidth: CGFloat = 70
@@ -66,7 +66,7 @@ class ChartView: UIView {
                 let maxPricePoint = UIBezierPath(roundedRect: maxPriceRect, cornerRadius: 4)
                 maxPricePoint.fill()
 
-                let priceSize = priceString.size(attributes: attributes)
+                let priceSize = priceString.size(withAttributes: attributes)
                 
                 let priceHeightDifference = (maxPriceRect.size.height - priceSize.height) / 2
                 let priceWidthDifference = (maxPriceRect.size.width - priceSize.width) / 2

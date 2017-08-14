@@ -45,7 +45,7 @@ class ChartViewController: UIViewController {
         }
     }
     
-    dynamic private func updatePrice() {
+    @objc dynamic private func updatePrice() {
         lastPrice = priceSource.source().lastPrice()
         
         if let storedPrice = lastPrice {
