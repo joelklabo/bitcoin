@@ -41,7 +41,7 @@ struct CoinbaseClient: PriceClient {
             }
             
             DispatchQueue.main.async {
-                result(CGFloat(price))
+                result(CGFloat(truncating: price))
             }
         }
         

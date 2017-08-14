@@ -38,7 +38,7 @@ struct BlockchainClient: PriceClient {
             }
             
             DispatchQueue.main.async {
-                result(CGFloat(lastUSDPrice))
+                result(CGFloat(truncating: lastUSDPrice))
             }
         }
         

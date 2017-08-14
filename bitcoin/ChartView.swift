@@ -19,9 +19,6 @@ class ChartView: UIView {
     override func draw(_ rect: CGRect) {
         
         guard let chart = chart else { return }
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
-        }
 
         let viewWidth = rect.size.width
         let viewHeight = rect.size.height
@@ -50,10 +47,10 @@ class ChartView: UIView {
                 
                 let priceString = "$\(formatPrice(maxPrice))" as NSString
                 
-                let attributes: [String: AnyObject] = [
-                    NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 14),
-                    NSAttributedStringKey.strokeWidth.rawValue: 0 as AnyObject,
-                    NSAttributedStringKey.foregroundColor.rawValue: UIColor.white
+                let attributes: [NSAttributedStringKey: Any] = [
+                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14),
+                    NSAttributedStringKey.strokeWidth: 0 as AnyObject,
+                    NSAttributedStringKey.foregroundColor: UIColor.white
                 ]
                 
                 let maxPriceWidth: CGFloat = 70
