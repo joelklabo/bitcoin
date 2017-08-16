@@ -7,8 +7,12 @@
 //
 
 import Foundation
-import CoreGraphics
 
-struct Chart {
-    let prices: [CGFloat]
+struct Chart: Decodable {
+    
+    let prices: [Price]
+    
+    enum CodingKeys: String, CodingKey {
+        case prices = "values"
+    }
 }

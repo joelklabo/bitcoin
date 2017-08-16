@@ -10,9 +10,9 @@ import UIKit
 
 class ChartViewController: UIViewController {
 
-    let priceSource = PriceClientSource.blockchain
+    let priceSource = BlockchainClient()
     
-    private var lastPrice: CGFloat?
+    private var lastPrice: Double?
     
     @IBOutlet weak var chartView: ChartView!
     @IBOutlet weak var currentPrice: UILabel!
@@ -46,20 +46,20 @@ class ChartViewController: UIViewController {
     }
     
     @objc dynamic private func updatePrice() {
-        lastPrice = priceSource.source().lastPrice()
+        lastPrice = priceSource.lastPrice()
         
         if let storedPrice = lastPrice {
             self.currentPrice.text = formatPrice(storedPrice)
         }
         activityIndicator.startAnimating()
-        priceSource.source().currentPrice { price in
+        priceSource.currentPrice { price in
             self.activityIndicator.stopAnimating()
-            self.priceSource.source().storePrice(price)
-            self.currentPrice.text = self.formatPrice(price)
+            self.priceSource.storePrice(price.last)
+            self.currentPrice.text = self.formatPrice(price.last)
         }
     }
 
-    private func formatPrice(_ price: CGFloat) -> String {
+    private func formatPrice(_ price: Double) -> String {
         return String(format: "%.02f", price)
     }
 

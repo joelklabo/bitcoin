@@ -7,8 +7,14 @@
 //
 
 import Foundation
-import CoreGraphics
 
-//struct Price {
-//    let value: CGFloat
-//}
+struct Price: Decodable {
+    
+    let value: Double
+    let date: Date
+    
+    enum CodingKeys: String, CodingKey {
+        case value = "y"
+        case date = "x"
+    }
+}

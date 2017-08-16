@@ -32,33 +32,27 @@ struct BlockchainChartClient: ChartClient {
             break
         }
         
-        guard let safeUrl = url else {
-            fatalError()
-        }
-        
-        let task = URLSession.shared.dataTask(with: safeUrl) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             
             guard let data = data else {
                 fatalError()
             }
             
-            guard let json = try! JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] else {
-                fatalError()
-            }
+//            guard let jsonString = String(data: data, encoding: .utf8) else {
+//              fatalError()
+//            }
+//            
+//            print(jsonString)
             
-            guard let values: Array = json["values"] as? Array<[String: Any]> else {
-                fatalError()
-            }
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .secondsSince1970
             
-            let prices: [CGFloat] = values.map { value in
-                guard let price = value["y"] as? CGFloat else {
-                    fatalError()
-                }
-                return price
-            }
+            let chart = try! decoder.decode(Chart.self, from: data)
+            
+            print(chart.prices.count)
             
             DispatchQueue.main.async {
-                result(Chart(prices: prices))
+                result(chart)
             }
         }
         
