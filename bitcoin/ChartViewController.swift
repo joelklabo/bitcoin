@@ -25,16 +25,13 @@ class ChartViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updatePrice), name: becameActiveNotification, object: nil)
         activityIndicator.hidesWhenStopped = true
         updateChart(.oneMonth)
-        segmentedControl.selectedSegmentIndex = ChartRange.oneMonth.rawValue
+//        segmentedControl.selectedSegmentIndex = ChartRange.oneMonth.rawValue
     }
 
     @IBAction func chartRangeUpdate(_ sender: Any) {
-        if let control = sender as? UISegmentedControl {
-            guard let chartRange = ChartRange(rawValue: control.selectedSegmentIndex) else {
-                fatalError()
-            }
-            updateChart(chartRange)
-        }
+//        if let control = sender as? UISegmentedControl {
+//            updateChart(chartRange)
+//        }
     }
     
     private func updateChart(_ range: ChartRange) {

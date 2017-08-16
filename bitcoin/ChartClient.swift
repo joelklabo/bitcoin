@@ -12,9 +12,9 @@ protocol ChartClient {
     func chartFor(_ range: ChartRange, _ result: @escaping (Chart) -> ())
 }
 
-enum ChartRange: Int {
-    case allTime
-    case oneYear
-    case twoYears
-    case oneMonth
+enum ChartRange: String {
+    case allTime = "all"
+    case oneYear = "1year"
+    case twoYears = "2years"
+    case oneMonth = "30days"
 }
