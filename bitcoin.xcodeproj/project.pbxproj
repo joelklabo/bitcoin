@@ -21,7 +21,24 @@
 		68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE617E1DEF4B4300E0E6DD /* Price.swift */; };
 		68FE61811DEF4C5C00E0E6DD /* PriceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */; };
 		ED598E881F44091E008853EE /* CurrentPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED598E871F44091E008853EE /* CurrentPrice.swift */; };
+		ED84E8E91F4410CB00A3C354 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84E8E81F4410CB00A3C354 /* ChartViewModel.swift */; };
+		EDFC6E351F454EF4003A3715 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC6E341F454EF4003A3715 /* Tests.swift */; };
+		EDFC6E3E1F454FA8003A3715 /* ChartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC6E3D1F454FA8003A3715 /* ChartViewModelTests.swift */; };
+		EDFC6E401F45507B003A3715 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84E8E81F4410CB00A3C354 /* ChartViewModel.swift */; };
+		EDFC6E411F455080003A3715 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687AA2641DF2651700B21740 /* Chart.swift */; };
+		EDFC6E421F455083003A3715 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE617E1DEF4B4300E0E6DD /* Price.swift */; };
+		EDFC6E431F455087003A3715 /* CurrentPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED598E871F44091E008853EE /* CurrentPrice.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDFC6E371F454EF4003A3715 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68FE61611DED4E2200E0E6DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68FE61681DED4E2200E0E6DD;
+			remoteInfo = bitcoin;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		687AA2641DF2651700B21740 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
@@ -40,10 +57,22 @@
 		68FE617E1DEF4B4300E0E6DD /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		68FE61801DEF4C5C00E0E6DD /* PriceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceClient.swift; sourceTree = "<group>"; };
 		ED598E871F44091E008853EE /* CurrentPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPrice.swift; sourceTree = "<group>"; };
+		ED84E8E81F4410CB00A3C354 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		EDFC6E321F454EF4003A3715 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDFC6E341F454EF4003A3715 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		EDFC6E361F454EF4003A3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDFC6E3D1F454FA8003A3715 /* ChartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		68FE61661DED4E2200E0E6DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDFC6E2F1F454EF4003A3715 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,6 +150,7 @@
 			children = (
 				68FE616B1DED4E2200E0E6DD /* bitcoin */,
 				68FE61731DED4E2300E0E6DD /* Assets.xcassets */,
+				EDFC6E331F454EF4003A3715 /* Tests */,
 				68FE616A1DED4E2200E0E6DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				68FE61691DED4E2200E0E6DD /* bitcoin.app */,
+				EDFC6E321F454EF4003A3715 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,8 +167,10 @@
 		68FE616B1DED4E2200E0E6DD /* bitcoin */ = {
 			isa = PBXGroup;
 			children = (
+				EDFC6E2B1F454E73003A3715 /* Tests */,
 				687AA2731DF35D6000B21740 /* Storyboard */,
 				68AB564B1DF068A9007A92B4 /* View Controllers */,
+				ED84E8E71F4410AB00A3C354 /* View Models */,
 				687AA2721DF35CBB00B21740 /* Views */,
 				687AA26D1DF2706B00B21740 /* Clients */,
 				68AB564C1DF068C6007A92B4 /* State */,
@@ -145,6 +178,31 @@
 				68FE61781DED4E2300E0E6DD /* Info.plist */,
 			);
 			path = bitcoin;
+			sourceTree = "<group>";
+		};
+		ED84E8E71F4410AB00A3C354 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED84E8E81F4410CB00A3C354 /* ChartViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		EDFC6E2B1F454E73003A3715 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EDFC6E3D1F454FA8003A3715 /* ChartViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		EDFC6E331F454EF4003A3715 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EDFC6E341F454EF4003A3715 /* Tests.swift */,
+				EDFC6E361F454EF4003A3715 /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,13 +225,31 @@
 			productReference = 68FE61691DED4E2200E0E6DD /* bitcoin.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EDFC6E311F454EF4003A3715 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDFC6E391F454EF4003A3715 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				EDFC6E2E1F454EF4003A3715 /* Sources */,
+				EDFC6E2F1F454EF4003A3715 /* Frameworks */,
+				EDFC6E301F454EF4003A3715 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDFC6E381F454EF4003A3715 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = EDFC6E321F454EF4003A3715 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		68FE61611DED4E2200E0E6DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Joel Klabo";
 				TargetAttributes = {
@@ -182,6 +258,11 @@
 						DevelopmentTeam = 8X78R6JQ6Y;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+					};
+					EDFC6E311F454EF4003A3715 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 8X78R6JQ6Y;
+						TestTargetID = 68FE61681DED4E2200E0E6DD;
 					};
 				};
 			};
@@ -199,6 +280,7 @@
 			projectRoot = "";
 			targets = (
 				68FE61681DED4E2200E0E6DD /* bitcoin */,
+				EDFC6E311F454EF4003A3715 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +293,13 @@
 				68FE61771DED4E2300E0E6DD /* LaunchScreen.storyboard in Resources */,
 				68FE61741DED4E2300E0E6DD /* Assets.xcassets in Resources */,
 				68FE61721DED4E2300E0E6DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDFC6E301F454EF4003A3715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,12 +319,34 @@
 				ED598E881F44091E008853EE /* CurrentPrice.swift in Sources */,
 				68FE61811DEF4C5C00E0E6DD /* PriceClient.swift in Sources */,
 				687AA2711DF35CB700B21740 /* ChartView.swift in Sources */,
+				ED84E8E91F4410CB00A3C354 /* ChartViewModel.swift in Sources */,
 				68FE617F1DEF4B4300E0E6DD /* Price.swift in Sources */,
 				687AA2691DF2686F00B21740 /* ChartClientSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDFC6E2E1F454EF4003A3715 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDFC6E411F455080003A3715 /* Chart.swift in Sources */,
+				EDFC6E401F45507B003A3715 /* ChartViewModel.swift in Sources */,
+				EDFC6E351F454EF4003A3715 /* Tests.swift in Sources */,
+				EDFC6E431F455087003A3715 /* CurrentPrice.swift in Sources */,
+				EDFC6E421F455083003A3715 /* Price.swift in Sources */,
+				EDFC6E3E1F454FA8003A3715 /* ChartViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDFC6E381F454EF4003A3715 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68FE61681DED4E2200E0E6DD /* bitcoin */;
+			targetProxy = EDFC6E371F454EF4003A3715 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68FE61701DED4E2300E0E6DD /* Main.storyboard */ = {
@@ -398,6 +509,46 @@
 			};
 			name = Release;
 		};
+		EDFC6E3A1F454EF4003A3715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X78R6JQ6Y;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joelklabo.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bitcoin.app/bitcoin";
+			};
+			name = Debug;
+		};
+		EDFC6E3B1F454EF4003A3715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X78R6JQ6Y;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joelklabo.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bitcoin.app/bitcoin";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +566,15 @@
 			buildConfigurations = (
 				68FE617C1DED4E2300E0E6DD /* Debug */,
 				68FE617D1DED4E2300E0E6DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDFC6E391F454EF4003A3715 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDFC6E3A1F454EF4003A3715 /* Debug */,
+				EDFC6E3B1F454EF4003A3715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
