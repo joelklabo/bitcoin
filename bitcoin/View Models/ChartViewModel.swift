@@ -56,7 +56,7 @@ public struct ChartViewModel {
         
         var relativePoints: [RelativePoint] = []
         for (index, yValue) in relativeYValues.enumerated() {
-            relativePoints.append((x: Double( index / numPrices ), y: yValue))
+            relativePoints.append((x: Double( Double(index) / Double(numPrices)), y: yValue))
         }
         
         line = relativePoints

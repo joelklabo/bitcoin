@@ -63,13 +63,28 @@ class ChartViewModelTests: XCTestCase {
         
         XCTAssertEqual(chartViewModel.startDate, "Dec 31, 1969")
         XCTAssertEqual(chartViewModel.endDate, "Aug 16, 2017")
-
     }
     
-    func testLineHasMaxPoints() {
+    func testLineHasCorrectNumberOfPoints() {
         let chartWithAFewPoints = makeChart(withNumberOfPrices: 9)
         let chartViewModelWithAFewPoints = ChartViewModel(withChart: chartWithAFewPoints)
         XCTAssertEqual(chartViewModelWithAFewPoints.line.count, 9)
+        
+        let chartWithALotOfPoints = makeChart(withNumberOfPrices: 1500)
+        let chartViewModelWithALotOfPoints = ChartViewModel(withChart: chartWithALotOfPoints)
+        XCTAssertEqual(chartViewModelWithALotOfPoints.line.count, 1500)
+    }
+    
+    func testLineHasPointsInCorrectRelativeLocation() {
+        let numberOfPrices = 100
+        let chart = makeChart(withNumberOfPrices: numberOfPrices)
+        let chartViewModel = ChartViewModel(withChart: chart)
+        
+        for (index, point) in chartViewModel.line.enumerated() {
+            XCTAssertEqual(point.x, Double(Double(index) / Double(numberOfPrices)))
+            XCTAssertEqual(point.y, Double(Double(index + 1) / Double(numberOfPrices)))
+            print(point)
+        }
     }
     
     private func makeChart(withNumberOfPrices numPrices: Int) -> Chart {
